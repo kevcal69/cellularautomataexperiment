@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://gitlab.com/kevcal69/3dsphere/issues"
   },
-  "homepage": "https://gitlab.com/kevcal69/3dsphere#README"
+  "homepage": "https://gitlab.com/kevcal69/3dsphere#README",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "nunjucks": "^2.4.2"
+  }
 }
