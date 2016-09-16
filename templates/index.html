@@ -3,13 +3,62 @@
 	<head>
 		<meta charset=utf-8>
 		<title>My first Three.js app</title>
-		<style>
-			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
-		</style>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="/static/style.css" media="screen" title="no title">
 	</head>
 	<body>
-		<script src="/bower_components/build/three.min.js"></script>
-		<script src="/static/script.js" charset="utf-8"></script>
+        <div class="body-wrapper">
+            <div class="page">
+                <div class="title-header">
+                    <div class="title">
+                        Cellular Automata Simulator
+                    </div>
+                    <div class="logo">
+                        <div class="upper-box">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <div class="lower-box">
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button total">
+                    Totalistic
+                </div>
+                <div class="button elem">
+                    Elementary
+                </div>
+            </div>
+        </div>
+        <div class="page sec">
+        </div>
+        <div class="controls">
+            <div class="back">Go Back</div>
+        </div>
 	</body>
 </html>
+<script type="text/javascript">
+    let buttont = document.querySelector('.button.total')
+    buttont.addEventListener('click',
+    function(){
+        document.querySelector('.body-wrapper').classList.add('margin-minus')
+        totalistic().runTotalistic()
+    }, false)
+    let buttone = document.querySelector('.button.elem')
+    buttone.addEventListener('click',
+    function(){
+        document.querySelector('.body-wrapper').classList.add('margin-minus')
+        runElementary()
+    }, false)
+
+
+    let controlbtn = document.querySelector('.controls .back')
+    controlbtn.addEventListener('click', function() {
+        document.querySelector('.body-wrapper').classList.remove('margin-minus')
+        totalistic().empty()
+    }, false)
+</script>
+<script src="/static/totalistic.js" charset="utf-8"></script>
+<script src="/static/script.js" charset="utf-8"></script>
